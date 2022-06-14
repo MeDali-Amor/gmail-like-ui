@@ -4,7 +4,7 @@ import React, { FC } from 'react'
 
 const HeaderBar: FC<AnimateBoxProps> = ({ children, ...rest }) => {
   return (
-    <AnimateBox position="absolute" top={40} right={0} left={0} {...rest}>
+    <AnimateBox position="absolute" top={0} right={0} left={0} {...rest}>
       <Bar
         variant="headerBar"
         flexDirection="row"
