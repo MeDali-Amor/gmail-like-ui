@@ -6,8 +6,8 @@ import SwipeableView from './swipable-view'
 import { TouchableOpacity } from '@/atoms'
 
 export interface ListItemProps extends Note {
-  onPress: (nodeId: string) => void
-  onSwipeLeft?: (nodeId: string, done: () => void) => void
+  onPress: (noteId: string) => void
+  onSwipeLeft?: (noteId: string, done: () => void) => void
 }
 
 const NoteListItem: FC<ListItemProps> = props => {

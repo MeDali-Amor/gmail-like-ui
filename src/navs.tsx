@@ -3,6 +3,7 @@ import { NavigatorScreenParams } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import * as React from 'react'
 import Sidebar from './components/sidebar'
+import DetailScreen from './screens/details'
 import MainScreen from './screens/main'
 
 export type HomeDrawerParamList = {
@@ -11,7 +12,7 @@ export type HomeDrawerParamList = {
 export type RootStackParamList = {
   Home: NavigatorScreenParams<HomeDrawerParamList>
   Detail: {
-    nodeId: string
+    noteId: string
   }
 }
 
@@ -47,6 +48,7 @@ export default function Navigations() {
         component={Home}
         options={{ headerShown: false }}
       />
+      <Stack.Screen name="Detail" component={DetailScreen} options={{}} />
     </Stack.Navigator>
   )
 }
